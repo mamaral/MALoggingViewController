@@ -3,6 +3,8 @@ MALoggingViewController
 
 MALoggingViewController is a real-time pseudo-console you can embed in your application, perfect for testing and debugging in the real world. Whether you are determining the reliability of network traffic while driving through areas with poor service, testing push notifications on ad-hoc builds while not connected to Xcode, or working out those pesky Core Location bugs, there's no need to carry around half of your development environment with you. No more driving around town with the Xcode console open, or having to handle logging to files and emailing them later to figure out what the heck happened - you can see all the data on your device, anywhere, in real time.
 
+This is not meant to be a replacement for something like CocoaLumberjack, and is absolutely not optimized for speed or efficiency, but for day-to-day testing and debugging this is a pretty neat tool.
+
 
 Usage
 =====
@@ -18,7 +20,7 @@ self.logger = loggingVC;
 ```
 
 
-![demo](demo.gif)
+![demo](log_demo.gif)
 
 
 Community
