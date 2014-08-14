@@ -120,11 +120,14 @@ static NSString * const kMALoggingViewDefaultFont = @"Courier-Bold";
     [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss.SSS"];
     NSString *dateString = [formatter stringFromDate:now];
     
-    // append the timestamp and log text just like NSLog would
-    _textView.text = [_textView.text stringByAppendingFormat:@"%@ %@\n", dateString, logText];
-    
-    // scroll the view down
-    [self scrollToBottom];
+    // make sure any UI stuff is done on the main thread!
+    dispatch_async(dispatch_get_main_queue(), ^{
+        // append the timestamp and log text just like NSLog would
+        _textView.text = [_textView.text stringByAppendingFormat:@"%@ %@\n", dateString, logText];
+        
+        // scroll the view down
+        [self scrollToBottom];
+    });
     
     // log the text to the console normally
     NSLog(@"%@", logText);
