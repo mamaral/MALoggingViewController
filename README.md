@@ -1,7 +1,7 @@
 MALoggingViewController
 ==================
 
-NOTE: This is has not yet been thoroughly tested and is in alpha, I would strongly advise against using this in any release builds.
+# NOTE: This is has not yet been thoroughly tested and is in alpha, I would strongly advise against using this in any release builds. This was mostly a fun project, not something I will be maintaining or working on in the future.
 
 MALoggingViewController is a real-time pseudo-console you can embed in your application, perfect for testing and debugging in the real world. Whether you are determining the reliability of network traffic while driving through areas with poor service, testing push notifications on ad-hoc builds while not connected to Xcode, or working out those pesky Core Location bugs, there's no need to carry around half of your development environment with you. No more driving around town with the Xcode console open, or having to handle logging to files and emailing them later to figure out what the heck happened - you can see all the data on your device, anywhere, in real time.
 
